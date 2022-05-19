@@ -16,7 +16,7 @@ function Login() {
         auth
             .signInWithEmailAndPassword(email, password)
             .then(auth => {
-                navigate.push('/');
+                navigate('/');
             })
             .catch(error => alert(error.message))
 
@@ -29,7 +29,7 @@ function Login() {
             .createUserWithEmailAndPassword(email, password)
             .then((auth) => {
                 if (auth) {
-                    navigate.push('/');
+                    navigate('/');
                 }
             })
             .catch(error => alert(error.message))
